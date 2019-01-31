@@ -90,9 +90,7 @@
                             <outletCollection property="gestureRecognizers" destination="i4O-jn-DmR" appends="YES" id="a4M-Xy-iVF"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="Igf-Mg-6HJ">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="VJh-Qb-KBH"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="Igf-Mg-6HJ"/>
                     <connections>
                         <outlet property="billField" destination="RYl-ux-d3W" id="7gn-au-LfG"/>
                         <outlet property="tipControl" destination="ed0-Wa-lew" id="QxB-Pd-xhD"/>
