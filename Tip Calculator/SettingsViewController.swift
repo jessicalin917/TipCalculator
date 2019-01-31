@@ -66,6 +66,29 @@ class SettingsViewController: UIViewController {
         defaults.synchronize()
     }
     
+    @IBAction func resetValues(_ sender: UIButton) {
+        // reset to original values
+        
+        customizeTip( percent: Double(default1), index: 0 )
+        customizeTip( percent: Double(default2), index: 1 )
+        customizeTip( percent: Double(default3), index: 2 )
+        
+        // reset labels
+        tip1Label.text = String(format: "%.0f", Double(default1)) + "%"
+        tip2Label.text = String(format: "%.0f", Double(default2)) + "%"
+        tip3Label.text = String(format: "%.0f", Double(default3)) + "%"
+        
+        // reset slider positions
+        slider1.value = Float(default1)
+        slider2.value = Float(default2)
+        slider3.value = Float(default3)
+        
+        // reset slider positions in defaults
+        defaults.set(Float(default1), forKey: sliderPos1)
+        defaults.set(Float(default2), forKey: sliderPos2)
+        defaults.set(Float(default3), forKey: sliderPos3)
+    }
+    
     func customizeTip( percent: Double, index: Int ) {
         var currentTip: String = ""
         
